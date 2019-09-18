@@ -1,0 +1,71 @@
+* {
+    background-color: rgb(180, 180, 180);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h1 {
+    font-family: 'Manjari', sans-serif;
+    font-size: 70px;
+    display: table;
+    margin: 0 auto;
+    line-height: 150px;
+    background: linear-gradient(to right, #009246 25%, #FFFFFF 30%, #FFFFFF 60%, #CE2B37 67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: 'Manjari', sans-serif;
+}
+
+h3 {
+    margin-left: 100px;
+    font-family: 'Manjari', sans-serif;
+}
+
+h4 {
+    margin-left: 150px;
+    font-family: 'Manjari', sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.h3Text {
+    text-indent: 52px;
+}
+
+.h4Text {
+    text-indent: 102px;
+}
+
+#flag {
+    box-shadow: 10px 10px 10px grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+#demography {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#img {
+    box-shadow: 10px 10px 10px grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 10px;
+}
