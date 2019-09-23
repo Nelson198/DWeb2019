@@ -65,6 +65,14 @@ a {
     height: auto;
 }
 
+#github {
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 1%; 
+    width: 2.1%;
+}
+
 #img {
     box-shadow: 10px 10px 10px grey;
     border-radius: 10px;
