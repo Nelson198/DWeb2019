@@ -1,0 +1,11 @@
+--> Exercício 6
+Especifique as expressões XPath que respondam às seguintes alíneas:
+
+(a) Qual o "IDENTI" dos arqueossítios do concelho de Amares.
+Resposta: //IDENTI[../CONCEL = " Amares "]
+
+(b) Quais os concelhos com arqueossítios registados.
+Resposta: //CONCEL[../TIPO[@ASSUNTO = "arqueossitio"]]
+
+(c) Seleccione as descrições dos arqueossítios do concelho de Montalegre.
+Resposta: //DESCRI[../CONCEL = " Montalegre "]
