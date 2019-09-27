@@ -5,7 +5,7 @@ Especifique as expressões XPath que respondam às seguintes alíneas:
 Resposta: //IDENTI[../CONCEL = " Amares "]
 
 (b) Quais os concelhos com arqueossítios registados.
-Resposta: //CONCEL[../TIPO[@ASSUNTO = "arqueossitio"]]
+Resposta: distinct-values(/ARQSITS/ARQELEM/normalize-space(CONCEL))
 
 (c) Seleccione as descrições dos arqueossítios do concelho de Montalegre.
 Resposta: //DESCRI[../CONCEL = " Montalegre "]

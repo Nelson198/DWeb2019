@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!ELEMENT project-record (header, workteam, abstract, deliverables, date)>
-<!ELEMENT header (key-name, title, subtitle, begin-date, end-date, supervisor)>
-<!ELEMENT key-name (#PCDATA)>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT subtitle (#PCDATA)>
-<!ELEMENT begin-date (#PCDATA)>
-<!ELEMENT end-date (#PCDATA)>
-<!ELEMENT supervisor (#PCDATA)>
-<!ELEMENT workteam (element+)>
-<!ELEMENT element (name, email)>
-<!ELEMENT name (#PCDATA)>
+<!ELEMENT projeto (designação, cabeçalho, grupo, descrição, documentos, data)>
+<!ELEMENT designação (#PCDATA)>
+<!ELEMENT cabeçalho (chave, título, subtítulo, data-início, data-fim, professor)>
+<!ELEMENT chave (#PCDATA)>
+<!ELEMENT título (#PCDATA)>
+<!ELEMENT subtítulo (#PCDATA)>
+<!ELEMENT data-início (#PCDATA)>
+<!ELEMENT data-fim (#PCDATA)>
+<!ELEMENT professor (#PCDATA)>
+<!ELEMENT grupo (elemento+)>
+<!ELEMENT elemento (nome, email, github)>
+<!ELEMENT nome (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
-<!ELEMENT abstract (#PCDATA)>
-<!ELEMENT deliverables (item+)>
-<!ELEMENT item (#PCDATA)>
-<!ELEMENT date (#PCDATA)>
-<!ATTLIST supervisor link CDATA #REQUIRED>
-<!ATTLIST element id CDATA #REQUIRED>
-<!ATTLIST item link CDATA #REQUIRED>
+<!ELEMENT github (#PCDATA)>
+<!ELEMENT descrição (#PCDATA|ficheiro)*>
+<!ELEMENT ficheiro (#PCDATA)>
+<!ELEMENT documentos (documento+)>
+<!ELEMENT documento (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+
+<!ATTLIST professor 
+          webpage CDATA #REQUIRED
+          email CDATA #REQUIRED>
+<!ATTLIST email
+          link CDATA #REQUIRED>
+<!ATTLIST github
+          link CDATA #REQUIRED>
+<!ATTLIST documento
+          id CDATA #REQUIRED
+          link CDATA #REQUIRED>
+<!ATTLIST ficheiro
+          id CDATA #REQUIRED>

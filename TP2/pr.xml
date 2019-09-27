@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE project-record SYSTEM "pr.dtd">
-<project-record>
-    <header>
-        <key-name>PED_MICEI2002_TESES</key-name>
-        <title>Schema e Stylesheet para tratamento de teses em XML</title>
-        <subtitle>Relatório inserido nos trabalhos práticos da cadeira de PED do MICEI 2001/02</subtitle>
-        <begin-date>Setembro 2002</begin-date>
-        <end-date>Setembro 2002</end-date>
-        <supervisor link="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
-    </header>
-    <workteam>
-        <element id="1">
-            <name>Guilherme António Teixeira</name>
-            <email>guilherme.teixeira@neoplastica.com</email>
-        </element>
-    </workteam>
-    <abstract>
-        O XML, validado pelo schema, juntamente com o potente processamento via XSLT, permite dispor de facilidades acrescidas no tratamento de informação de uma forma standard e partilhável. Estas são, além de outras evidentes vantagens, as que abrem caminho a uma mais que provável evolução desta tecnologia nos círculos comerciais e de investigação. Outro facto importante, diz respeito à substituição de interfaces EDI por XML em aplicações bussiness oriented.
-        O trabalho apresentado contempla um schema, uma stylesheet, e a instância do schema em XML. A instância é o próprio relatório.
-        O trabalho pretende definir uma estrutura expedita e funcional, passível de ser aplicada a um trabalho descritivo, como por exemplo uma tese. Não é objectivo do trabalho criar uma implementação sistemática de todos os objectos possíveis, mas sim criar algumas utilizações mais comuns para exemplificar a potência destas linguagens.
-        Ficam neste trabalho em aberto algumas ideias, a serem aplicadas mais tarde a quando da escrita da tese, ou pré-tese, porque na verdade o facto de manter o documento num formato exportável para vários formatos, para várias plataformas, e anotado, garante qualquer tratamento no futuro, constituindo uma vantagem muito importante a ter em conta.
-    </abstract>
-    <deliverables>
-        <item link="http://www4.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.html">Report (HTML version)</item>
-        <item link="http://www.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.xml">Report (XML version)</item>
-        <item link="http://www.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.xsd">XML Schema Definition (XSD)</item>
-        <item link="http://www.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/schema_doc.html">XML Schema Documentation (HTML)</item>
-        <item link="http://www.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.xslt">XSLT StyleSheet file (XSLT)</item>
-        <item link="http://www.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.spp">XmlSpy Project Definitions (XML)</item>
-    </deliverables>
-    <date>
-        09-09-2002
-    </date>
-</project-record>
+<!DOCTYPE projeto SYSTEM "PR.dtd">
+<projeto>
+    <designação>Desenvolvimento de Aplicações WEB (DAW) - Trabalho Prático nº2</designação>
+    <cabeçalho>
+        <chave>TP2</chave>
+        <título>Exploração e compreensão de conceitos associados à linguagem XML: XPATH e DTD's</título>
+        <subtítulo>XML - Linguagem de anotação</subtítulo>
+        <data-início>24/09/2019</data-início>
+        <data-fim>01/10/2019</data-fim>
+        <professor webpage="http://www4.di.uminho.pt/~jcr/" email="jcr@di.uminho.pt">José Carlos Ramalho</professor>
+    </cabeçalho>
+    <grupo>
+        <elemento>
+            <nome>Nelson José Dias Teixeira</nome>
+            <email link="pg41091@alunos.uminho.pt">pg41091@alunos.uminho.pt</email>
+            <github link="https://github.com/Nelson198">Nelson198</github>
+        </elemento>
+    </grupo>
+    <descrição>
+        No segundo trabalho prático desta U.C. era requirido a realização de alguns exercícios, entre os quais se destacam:
+        --> elaborar um <ficheiro id="PR-xml">documento</ficheiro> XML que representasse corretamente a estrutura de uma determinada página WEB; 
+        --> definir um <ficheiro id="PR-dtd">DTD</ficheiro> que validasse o presente <ficheiro id="PR-xml">documento</ficheiro>;
+        --> resolver os exercícios <ficheiro id="arq-txt">6</ficheiro> e <ficheiro id="arq-dtd">7</ficheiro> da ficha nº3 que foi disponibilizada pelo professor:
+            --> quanto ao exercício 6 era necessário escrever algumas expressões XPath para filtrar vários elementos de um dado <ficheiro id="arq-xml">documento</ficheiro> XML.
+            --> relativamente ao exercício 7 era pedido a definição de um DTD que validasse o ficheiro mencionado anteriormente.
+    </descrição>
+    <documentos>
+        <documento id="PR-xml" link="PR.xml">Documento atual</documento>
+        <documento id="PR-dtd" link="PR.dtd">Ficheiro DTD que valida o projeto (ou seja, este mesmo documento, "PR.xml")</documento>
+        <documento id="arq-txt" link="arq.txt">Ficheiro de texto que contém as respostas (e parte do enunciado) do exercício 6 da ficha nº3</documento>
+        <documento id="arq-dtd" link="arq.dtd">Ficheiro DTD que valida o documento arq.xml (exercício 7 da ficha nº3)</documento>
+        <documento id="arq-xml" link="arq.xml">Ficheiro XML necessário para a realização do exercício 6 e 7 da ficha nº3</documento>
+    </documentos>
+    <data>
+        27/09/2019
+    </data>
+</projeto>
