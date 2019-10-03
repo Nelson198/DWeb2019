@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP3</keyname>
+        <title>XSL</title>
+        <subtitle></subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>01/10/2019</bdate>
+        <edate>08/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Conteúdo do TP3
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="">...</deliverable>
+    </deliverables>
+</pr>
