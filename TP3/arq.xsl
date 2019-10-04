@@ -14,7 +14,7 @@
                 <body>
                     <h1 align="center">Arqueossítios do Nordeste Português</h1>
                     <h2 align="center">Índice dos arqueossítios</h2>
-                    <ol style="margin-left: 20px">
+                    <ol style="margin: 2%">
                         <xsl:apply-templates mode="indice"/>
                     </ol>
                 </body>
@@ -42,10 +42,8 @@
                 </head>
                 <body>
                     <h1 align="center">Arqueossítios do Nordeste Português</h1>
-                    <h2 align="center">
-                        <xsl:value-of select="IDENTI"/>
-                    </h2>
-                    <table class="w3-table-all w3-centered w3-hoverable">
+                    <h2 align="center"><xsl:value-of select="IDENTI"/></h2>
+                    <table class="w3-table-all w3-hoverable" style="margin: 2%">
                         <xsl:if test="IMAGEM">
                             <xsl:apply-templates select="IMAGEM"/>
                         </xsl:if>
@@ -59,7 +57,7 @@
                             <th>Descrição</th>
                             <td><xsl:value-of select="DESCRI"/></td>
                         </tr>
-                        <xsl:if test="LUGAR">
+                        <xsl:if test="LUGAR and string-length(LUGAR) ne 0">
                             <tr>
                                 <th>Lugar</th>
                                 <td><xsl:value-of select="LUGAR"/></td>
@@ -97,7 +95,7 @@
                         </tr>
                     </table>
                     
-                    <div style="margin-top: 30px; margin-left: 30px; margin-right: 30px; text-align: justify;">
+                    <div style="margin: 2%; text-align: justify">
                         <xsl:if test="ACESSO">
                             <p>
                                 <b>Acesso: </b><xsl:value-of select="ACESSO"/>
@@ -136,7 +134,7 @@
                         </xsl:if>
                     </div>
                     
-                    <footer style="margin-left: 30px; margin-right: 30px">
+                    <footer style="margin: 2%">
                         <xsl:if test="AUTOR">
                             <p>
                                 <b>Autor: </b><xsl:value-of select="AUTOR"/>

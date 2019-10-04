@@ -3,8 +3,8 @@
 <pr>
     <metadata>
         <keyname>TP3</keyname>
-        <title>XSL</title>
-        <subtitle></subtitle>
+        <title>Transformação de documentos XML com XSL - XSLT</title>
+        <subtitle>Trabalho prático nº3 - Desenvolvimento de Aplicações Web</subtitle>
         <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
         <bdate>01/10/2019</bdate>
         <edate>08/10/2019</edate>
@@ -19,10 +19,26 @@
     </workteam>
     <abstract>
         <p>
-            Conteúdo do TP3
+            No <b>terceiro trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi pedido a realização de dois exercícios que abordam as transformações de documentos <i>XML</i>.
+        </p>
+        <p>
+            Numa <u>primeira instância</u> era requerido a transformação do ficheiro <i>PR.xml</i>, que respeita as regras definidas no ficheiro <i>PR.dtd</i> que foi desenvolvido nas aulas e que foi disponibilizado pelo docente, para um outro com o formato <i>.html</i>.
+            Para executar esta tarefa é preciso criar um documento <i>.xsl</i> que permite aplicar esta mesma transformação. Com isto, obtém-se como resultado uma página <i>Web</i> com o conteúdo presente no documento <i>XML</i> em causa.
+        </p>
+        <p>
+            Por fim, no <u>segundo e último exercício</u> é solicitado igualmente a criação de um ficheiro com extensão <i>.xsl</i>, isto é o documento <i>arq.xsl</i>, que possibilita a transformação do ficheiro relativo aos <xref url="arq.xml">arqueossítios</xref> (já presente no trabalho prático anterior) num <i>Website</i>.
+            Para tal, de forma a visualizar uma listagem de todos os arqueossítios presentes, é concebido um índice que é posteriormente ilustrado numa página <i>Web</i> específica, ou seja, em <xref url="website/index.html">index.html</xref>.
+            Para além disto, é também elaborada uma página <i>Web</i> para cada arqueossítio presente no documento <i>XML</i> em questão, exibindo-se informação relacionada com o mesmo.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="">...</deliverable>
+        <deliverable path="arq.xml">Arqueossítios - XML</deliverable>
+        <deliverable path="arq.dtd">Arqueossítios - DTD</deliverable>
+        <deliverable path="arq.xsl">Arqueossítios - XSL</deliverable>
+        <deliverable path="website/">Arqueossítios (Website)</deliverable>
+        <deliverable path="PR.xml">Relatório do TP3 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP3 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP3 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP3 - HTML (página Web)</deliverable>
     </deliverables>
 </pr>
