@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pr>
+    <metadata>
+        <keyname>TP4</keyname>
+        <title>Transformação de documentos XML com XSL e criação de servidores com Node.js</title>
+        <subtitle>Trabalho prático nº4 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>08/10/2019</bdate>
+        <edate>15/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>quarto trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi pedido a realização de dois exercícios que abordam o tema indicado acima.
+        </p>
+        <p>
+            Em <u>primeiro lugar</u> foi requirido a criação de um transformador em <i>XSL</i> para converter o ficheiro relativo aos arqueossítios em vários documentos <i>XML</i>, um para cada um dos arqueossítios individuais (conteúdo presente entre as <i>tags ARQELEM</i>);
+        </p>
+        <p>
+            No <u>segundo e último exercício</u> deste trabalho prático foi pedido a criação de um servidor de ficheiros, escrito em <i>JavaScript / Node.js</i>, que permite aceder a um determinado documento especificado na <i>query string</i> do <i>URL</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="arq.xml">(arq.xml) : Arqueossítios - XML</deliverable>
+        <deliverable path="arq2html.xsl">(arq2html.xsl) : Ficheiro XSL responsável por transformar cada arqueossítio (XML) numa página HTML</deliverable>
+        <deliverable path="xml-split.xsl">(xml-split.xsl) : Ficheiro XSL que cria um documento XML por cada arqueossítio presente em arq.xml</deliverable>
+        <deliverable path="dataset/">Pasta que contém os ficheiros XML de cada arqueossítio e ainda alguns ícones ou imagens</deliverable>
+        <deliverable path="error.html">Página Web que é apresentada quando o arqueossítio específicado não existe</deliverable>
+        <deliverable path="server.js">Servidor de ficheiros</deliverable>
+        <deliverable path="PR.xml">Relatório do TP4 - XML</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP4 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP4 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>

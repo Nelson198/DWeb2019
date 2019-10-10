@@ -2,6 +2,18 @@ var http = require("http");
 var fs = require("fs");
 var port = 7777;
 
+function handler(res, pathFile, contentType) {
+    fs.readFile(pathFile, function (err, data) {
+        if (err) {
+            console.log(pathFile + ":\n" + err);
+            return;
+        }
+        res.writeHead(200, { 'Content-Type': contentType });
+        res.write(data);
+        res.end();
+    });
+}
+
 var server = http.createServer(function (req, res) {
     var parts = req.url.split("/");
     /* Query String */
@@ -10,38 +22,32 @@ var server = http.createServer(function (req, res) {
     switch (queryString) {
         /* Ícone presente na "tab" da página Web */
         case "favicon.ico":
-            fs.readFile("dataset/favicon.ico", function (_err, data) {
-                res.writeHead(200, { 'Content-Type': 'image/x-icon' });
-                res.write(data);
-                res.end();
-            });
+            handler(res, "dataset/favicon.ico", "image/x-icon")
             break;
 
         /* Imagem presente no arqueossítio nº1 */
         case "taca.gif":
-            fs.readFile("dataset/taca.gif", function (_err, data) {
-                res.writeHead(200, { 'Content-Type': 'image/gif' });
-                res.write(data);
-                res.end();
-            });
+            handler(res, "dataset/taca.gif", "image/gif")
             break;
 
         /* Transformação XML --> HTML através do ficheiro arq2html.xsl */
         case "arq2html.xsl":
-            fs.readFile("arq2html.xsl", function (_err, data) {
-                res.writeHead(200, { 'Content-Type': 'text/xsl; charset=utf-8' });
-                res.write(data);
-                res.end();
-            });
+            handler(res, "arq2html.xsl", "text/xsl; charset=utf-8")
             break;
 
         default:
-            fs.readFile("dataset/arq" + queryString + ".xml", function (err, data) {
-                /* Se o ficheiro não existir, devolver o conteúdo da página error.html (ainda falta fazer !!!) */
-                if (err !== null) {
-                    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-                    res.write("<head><title>Error</title><link rel=\"icon\" href=\"dataset/error.ico\" type=\"image/x-icon\"></head><body><h1 style=\"text-align: center; margin: auto\">Infelizmente não foi possível localizar o ficheiro \"arq" + queryString + ".xml\" \u{1F630} </h1><img src=\"https://media.giphy.com/media/TvLuZ00OIADoQ/giphy.gif\" alt=\"\" style=\"display: block; margin: 0 auto; margin-top: 5%; width: 40%; border-radius: 15px;\"></body>");
-                    res.end();
+            fs.readFile("dataset/arq" + queryString + ".xml", function (err1, data) {
+                /* Se o ficheiro não existir, devolver o conteúdo da página error.html */
+                if (err1) {
+                    fs.readFile("error.html", function (err2, data) {
+                        if (err2) {
+                            console.error("error.html:\n" + err2);
+                            return;
+                        }
+                        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+                        res.write(data);
+                        res.end();
+                    });
                     return;
                 };
 
