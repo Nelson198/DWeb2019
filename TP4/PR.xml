@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
 <pr>
     <metadata>
         <keyname>TP4</keyname>
@@ -21,7 +22,7 @@
             No <b>quarto trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi pedido a realização de dois exercícios que abordam o tema indicado acima.
         </p>
         <p>
-            Em <u>primeiro lugar</u> foi requirido a criação de um transformador em <i>XSL</i> para converter o ficheiro relativo aos arqueossítios em vários documentos <i>XML</i>, um para cada um dos arqueossítios individuais (conteúdo presente entre as <i>tags ARQELEM</i>);
+            Em <u>primeiro lugar</u> foi requirido a criação de um transformador em <i>XSL</i> para converter o <xref url="http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml">ficheiro relativo aos arqueossítios</xref> (também disponível na secção seguinte) em vários documentos <i>XML</i>, um para cada um dos arqueossítios individuais (conteúdo presente entre as <i>tags ARQELEM</i>);
         </p>
         <p>
             No <u>segundo e último exercício</u> deste trabalho prático foi pedido a criação de um servidor de ficheiros, escrito em <i>JavaScript / Node.js</i>, que permite aceder a um determinado documento especificado na <i>query string</i> do <i>URL</i>.
@@ -35,6 +36,7 @@
         <deliverable path="error.html">Página Web que é apresentada quando o arqueossítio específicado não existe</deliverable>
         <deliverable path="server.js">Servidor de ficheiros</deliverable>
         <deliverable path="PR.xml">Relatório do TP4 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP4 - DTD</deliverable>
         <deliverable path="PR.xsl">Relatório do TP4 - XSL</deliverable>
         <deliverable path="PR.html">Relatório do TP4 - HTML (página Web)</deliverable>
     </deliverables>
