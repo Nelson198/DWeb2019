@@ -20,40 +20,45 @@ var server = http.createServer(function (req, res) {
     var queryString = parts[parts.length - 1];
 
     switch (queryString) {
-        /* Ícone presente na "tab" da página Web */
+        /* Ícone presente na "tab" da página Web de um arqueossítio */
         case "favicon.ico":
-            handler(res, "dataset/favicon.ico", "image/x-icon")
+            handler(res, "dataset/favicon.ico", "image/x-icon");
+            break;
+
+        /* Ícone presente na "tab" da página Web "error.html" */
+        case "error.ico":
+            handler(res, "dataset/error.ico", "image/x-icon");
             break;
 
         /* Imagem presente no arqueossítio nº1 */
         case "taca.gif":
-            handler(res, "dataset/taca.gif", "image/gif")
+            handler(res, "dataset/taca.gif", "image/gif");
             break;
 
-        /* Transformação XML --> HTML através do ficheiro arq2html.xsl */
+        /* Transformação XML --> HTML através do ficheiro "arq2html.xsl" */
         case "arq2html.xsl":
-            handler(res, "arq2html.xsl", "text/xsl; charset=utf-8")
+            handler(res, "arq2html.xsl", "text/xsl; charset=utf-8");
             break;
 
         default:
-            fs.readFile("dataset/arq" + queryString + ".xml", function (err1, data) {
-                /* Se o ficheiro não existir, devolver o conteúdo da página error.html */
+            fs.readFile("dataset/arq" + queryString + ".xml", function (err1, data1) {
+                /* Se o ficheiro não existir, devolver o conteúdo da página "error.html" */
                 if (err1) {
-                    fs.readFile("error.html", function (err2, data) {
+                    fs.readFile("error.html", function (err2, data2) {
                         if (err2) {
                             console.error("error.html:\n" + err2);
                             return;
                         }
                         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-                        res.write(data);
+                        res.write(data2);
                         res.end();
                     });
                     return;
                 };
 
-                /* Se o ficheiro existir, devolver o conteúdo da página arq{queryString}.xml */
+                /* Se o ficheiro existir, devolver o conteúdo da página "arq{queryString}.xml" */
                 res.writeHead(200, { 'Content-Type': 'text/xml; charset=utf-8' });
-                res.write(data);
+                res.write(data1);
                 res.end();
             });
             break;
