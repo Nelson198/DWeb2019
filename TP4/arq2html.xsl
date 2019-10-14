@@ -145,6 +145,10 @@
                         <b>Data (última atualização): </b>
                         <xsl:value-of select="DATA"/>
                     </p>
+
+                    <address>
+                        <a href="/" style="margin: 0 auto; display:block; text-align: center">Voltar à página inicial</a>
+                    </address>
                 </footer>
             </body>
         </html>

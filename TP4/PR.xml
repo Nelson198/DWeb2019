@@ -32,8 +32,10 @@
         <deliverable path="arq.xml">(arq.xml) : Arqueossítios - XML</deliverable>
         <deliverable path="arq2html.xsl">(arq2html.xsl) : Ficheiro XSL responsável por transformar cada arqueossítio (XML) numa página HTML</deliverable>
         <deliverable path="xml-split.xsl">(xml-split.xsl) : Ficheiro XSL que cria um documento XML por cada arqueossítio presente em arq.xml</deliverable>
-        <deliverable path="dataset/">Pasta que contém os ficheiros XML de cada arqueossítio e ainda alguns ícones ou imagens</deliverable>
+        <deliverable path="index.xsl">(index.xsl) : Ficheiro XSL que produz o documento index.html que contém o índice dos arqueossítios</deliverable>
+        <deliverable path="index.html">Página Web que contém o índice dos arqueossítios</deliverable>
         <deliverable path="error.html">Página Web que é apresentada quando o arqueossítio específicado não existe</deliverable>
+        <deliverable path="dataset/">Pasta que contém os ficheiros XML de cada arqueossítio e ainda alguns ícones ou imagens</deliverable>
         <deliverable path="server.js">Servidor de ficheiros</deliverable>
         <deliverable path="PR.xml">Relatório do TP4 - XML</deliverable>
         <deliverable path="PR.dtd">Relatório do TP4 - DTD</deliverable>
