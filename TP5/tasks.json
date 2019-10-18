@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Trabalho prático nº1",
+        "deadline": "2019-09-24",
+        "subject": "DAW"
+    },
+    {
+        "name": "Trabalho prático nº2",
+        "deadline": "2019-10-01",
+        "subject": "DAW"
+    },
+    {
+        "name": "Trabalho prático nº3",
+        "deadline": "2019-10-08",
+        "subject": "DAW"
+    },
+    {
+        "name": "Trabalho prático nº4",
+        "deadline": "2019-10-15",
+        "subject": "DAW"
+    },
+    {
+        "name": "Trabalho prático nº5",
+        "deadline": "2019-10-22",
+        "subject": "DAW"
+    }
+]
