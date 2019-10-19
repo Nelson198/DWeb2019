@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP5</keyname>
+        <title>Criação de um servidor em Node.js com o auxílio da biblioteca Pug.js </title>
+        <subtitle>Trabalho prático nº5 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>15/10/2019</bdate>
+        <edate>22/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>quinto trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de um exercício que aborda o tema indicado acima.
+        </p>
+        <p>
+            Este exercício consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir um conjunto de várias tarefas. 
+            Como tal, este gestor de tarefas é composto por <u>duas funcionalidades</u>: submissão de tarefas e visualização de todas as tarefas submetidas até ao momento. 
+        </p>
+        <p>
+            Por forma a agilizar o processo de codificação das páginas Web intrínsecas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+            Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+            De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+        </p>
+        <p>
+            <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <xref url="https://www.w3schools.com/">W3 Schools</xref> (<xref url="https://www.w3schools.com/w3css/4/w3.css">w3.css</xref>) para a maioria das páginas Web geradas neste trabalho prático.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="tasks.json">Ficheiro JSON relativo ao conjunto de tarefas submetidas</deliverable>
+        <deliverable path="taskManager.js">Servidor responsável pela gestão de tarefas</deliverable>
+        <deliverable path="submitTask.pug">Ficheiro Pug que traduz a página Web relativa a uma submissão de uma tarefa</deliverable>
+        <deliverable path="seeTasks.pug">Ficheiro Pug que traduz a página Web relativa à listagem de todas as tarefas submetidas</deliverable>
+        <deliverable path="layout.pug">Ficheiro Pug que especifica a estrutura base das páginas Web presentes</deliverable>
+        <deliverable path="index.pug">Ficheiro Pug que codifica a página Web inicial do gestor de tarefas</deliverable>
+        <deliverable path="error.pug">Ficheiro Pug que traduz a página Web relativa a um determinado erro</deliverable>
+        <deliverable path="images/">Pasta que contém alguns ícones ou imagens</deliverable>
+        <deliverable path="PR.xml">Relatório do TP5 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP5 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP5 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP5 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>
