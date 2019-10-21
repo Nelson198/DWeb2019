@@ -37,11 +37,9 @@
     <deliverables>
         <deliverable path="tasks.json">Ficheiro JSON relativo ao conjunto de tarefas submetidas</deliverable>
         <deliverable path="taskManager.js">Servidor responsável pela gestão de tarefas</deliverable>
-        <deliverable path="submitTask.pug">Ficheiro Pug que traduz a página Web relativa a uma submissão de uma tarefa</deliverable>
-        <deliverable path="seeTasks.pug">Ficheiro Pug que traduz a página Web relativa à listagem de todas as tarefas submetidas</deliverable>
-        <deliverable path="layout.pug">Ficheiro Pug que especifica a estrutura base das páginas Web presentes</deliverable>
-        <deliverable path="index.pug">Ficheiro Pug que codifica a página Web inicial do gestor de tarefas</deliverable>
-        <deliverable path="error.pug">Ficheiro Pug que traduz a página Web relativa a um determinado erro</deliverable>
+        <deliverable path="templates/layout.pug">Ficheiro Pug que especifica a estrutura base da página Web associado ao gestor de tarefas</deliverable>
+        <deliverable path="templates/index.pug">Ficheiro Pug que codifica o corpo da página Web relativo ao gestor de tarefas</deliverable>
+        <deliverable path="templates/error.pug">Ficheiro Pug que traduz a página Web relativa a um determinado erro</deliverable>
         <deliverable path="images/">Pasta que contém alguns ícones ou imagens</deliverable>
         <deliverable path="PR.xml">Relatório do TP5 - XML</deliverable>
         <deliverable path="PR.dtd">Relatório do TP5 - DTD</deliverable>

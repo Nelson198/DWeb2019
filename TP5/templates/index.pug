@@ -1,0 +1,39 @@
+extends layout
+
+block submitTask
+    body 
+        h2(style="color: #27C21F; text-align: center; font-family: Montserrat, sans-serif") Submissão de Tarefa
+
+        form(action="/sendTask", method="POST", style="margin-left: 15px; margin-right: 15px")
+            div(class="input-container")
+                i(class="fas fa-tasks icon")
+                input(class="input-field" type="text" placeholder="Nome da tarefa" name="name" required)
+
+            div(class="input-container")
+                i(class="far fa-calendar-check icon")
+                input(class="input-field" type="date" placeholder="Data limite" name="deadline" required)
+
+            div(class="input-container")
+                i(class="far fa-bookmark icon")
+                input(class="input-field" type="text" placeholder="Unidade curricular" name="subject" required)
+
+            section
+                input(type="submit" value="Enviar" class="btn")
+
+            p(style="text-align: center")= msg
+
+block seeTasks
+    h2(style="color: #2196F3; text-align: center; font-family: Montserrat, sans-serif") Lista de Tarefas
+    
+    .w3-container
+        table.w3-table-all.w3-hoverable.w3-border-blue
+            tr.w3-blue
+                th Nome da tarefa
+                th Data limite
+                th Unidade curricular
+
+            each task in list
+                tr.w3-border-blue
+                    td= task.name
+                    td= task.deadline
+                    td= task.subject

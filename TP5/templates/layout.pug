@@ -2,10 +2,11 @@ doctype html
 html
     head
         title Gestor de tarefas
-        meta(charset="utf-8")
-        script(src="https://kit.fontawesome.com/a076d05399.js")
+        meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
         link(rel="stylesheet", href="w3.css")
+        script(src="https://kit.fontawesome.com/a076d05399.js")
         style.
+            /*------------ Style : Submit Task ------------*/
             * {
                 box-sizing: border-box;
             }
@@ -51,26 +52,8 @@ html
             .btn:hover {
                 opacity: 1;
             }
-    body 
-        h2(style="color: #27C21F; text-align: center; font-family: Montserrat, sans-serif; margin-bottom: 2%") Submissão de Tarefa
-
-        form(action="/sendTask", method="POST", style="margin-left: 10%; margin-right: 10%")
-            div(class="input-container")
-                i(class="fas fa-tasks icon")
-                input(class="input-field" type="text" placeholder="Nome da tarefa" name="name" required)
-
-            div(class="input-container")
-                i(class="far fa-calendar-check icon")
-                input(class="input-field" type="date" placeholder="Data limite" name="deadline" required)
-
-            div(class="input-container")
-                i(class="far fa-bookmark icon")
-                input(class="input-field" type="text" placeholder="Unidade curricular" name="subject" required)
-
-            section
-                input(type="submit" value="Enviar" class="btn")
-
-            p(style="text-align: center")= msg
-        
-        a(style="font-family: Montserrat, sans-serif; font-size: 13pt; text-align: center; display: block; margin-top: 3%" 
-          href="/") &#128073; Voltar à pagina inicial &#128072;
+    body
+        block submitTask
+        hr
+        block seeTasks
+        hr
