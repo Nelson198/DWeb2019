@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1 Arquivo Sonoro
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        table.w3-table-all.w3-hoverable.w3-border-orange.w3-centered
+            tr.w3-orange
+                th #
+                th Nome da música
+                th Duração
+                th Operações
+            
+            tr.w3-border-orange
+                td ---
+                td ---
+                td ---
+                td
+                    a(href="/add")
+                        img(src="/images/add.png" alt="")
+
+            each doc in list
+                tr.w3-border-orange
+                    td(id=doc.id)= doc.id
+                    td= doc.tit
+                    td= doc.duracao
+                    td
+                        a(href=`/consult@${doc.id}`)
+                            img(src="/images/search.png" alt="")
+                        a(href=`/edit@${doc.id}`)
+                            img(src="/images/edit.png" alt="")
+                        img(src="/images/delete.png" alt="" onclick=`remove(${doc.id})`)
+    a(href="#" style="display: block; text-align: center")
+        p(style="font-size: 25px") &#128285;

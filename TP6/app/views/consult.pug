@@ -1,0 +1,101 @@
+extends layout
+
+block content
+    h2(style="color: #70B7E5") Consulta de registo
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        p
+            b Nº da música: 
+            = doc.id
+        p
+            b Província: 
+            = doc.prov
+        if (doc.local)
+            p
+                b Local: 
+                = doc.local
+        p
+            b Título da música: 
+            = doc.tit
+        if (doc.inst)
+            p
+                b Intrumento(s): 
+                = doc.inst
+        p
+            b Ficheiro da música:
+            ul
+                li 
+                    u Formato:
+                    | 
+                    = doc.file["-t"]
+                li
+                    u Nome:
+                    | 
+                    = doc.file["#text"]
+        if (doc.musico)
+            p
+                b Músico: 
+            if (doc.musico["#text"])
+                ul
+                    li
+                        u Nome(s):
+                        if (typeof doc.musico["#text"] === 'string')
+                            | 
+                            = doc.musico["#text"]
+                            li
+                                u Localidade:
+                                | 
+                                = doc.musico["from"]
+                        else
+                            ol
+                                for t, i in doc.musico["#text"]
+                                    li
+                                        | 
+                                        = t
+                            li
+                                u Profissão:
+                                | 
+                                = doc.musico["prof"]
+            else
+                ul
+                    li
+                        u Nome:
+                        | 
+                        = doc.musico
+        if (doc.obs)
+            p
+                b Observações: 
+                if (doc.obs["#text"])
+                    ul
+                        if (typeof doc.obs["#text"] === "string")
+                            li= doc.obs["#text"]
+                        else
+                            each t in doc.obs["#text"]
+                                li= t
+                        br
+                        li
+                            u Outros ficheiros associados:
+                            ul
+                                each f in doc.obs["file"]
+                                    li
+                                        u Formato:
+                                        | 
+                                        = f["-t"]
+                                        br
+                                        u Nome:
+                                        | 
+                                        = f["#text"]
+                        br                                        
+                        li
+                            u Instrumento(s) associado(s):
+                            | 
+                            = doc.obs["intxt"]
+                                
+                else
+                    = doc.obs
+        p
+            b Duração da música: 
+            = doc.duracao
+    br
+    a(href=`/#${doc.id}` style="display: block; text-align: center") Voltar à página inicial
+    br

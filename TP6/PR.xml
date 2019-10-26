@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP6</keyname>
+        <title>Criação de um servidor em Node.js com o auxílio da framework Express.js </title>
+        <subtitle>Trabalho prático nº6 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>22/10/2019</bdate>
+        <edate>29/10/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>sexto trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de dois exercícios que abordam o tema indicado acima.
+        </p>
+        <p>
+            No <u>primeiro exercício</u> era pedido a transformação do ficheiro <i><xref url="arq-son-EVO.xml">arq-son-EVO.xml</xref></i> para um documento <i>JSON</i> que, posteriomente, irá servir como base de dados para a aplicação requerida. 
+            Uma vez que o era permitido, optei por fazer esta tarefa na seguinte <xref url="http://www.utilities-online.info/xmltojson/#.XbTICehKjDc">página Web</xref>.
+        </p>
+        <p>
+            O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa, isto é, o ficheiro <i>JSON</i> <i><xref url="arq-son-EVO.json">arq-son-EVO.json</xref></i>. 
+            Como tal, este gestor de tarefas é composto por <u>quatro funcionalidades</u>: adição, remoção, edição e consulta de registos.
+        </p>
+        <p>
+            Tal como é indicado no título desta página, foi utilizada a <i>framework</i> <i>Express</i> para criação do servidor pretendido. 
+            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>Javascript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+        </p>
+        <p>
+            Por forma a agilizar o processo de codificação da maioria das páginas Web associadas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+            Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+            De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+        </p>
+        <p>
+            <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <xref url="https://www.w3schools.com/">W3 Schools</xref> (            <xref url="https://www.w3schools.com/w3css/4/w3.css">w3.css</xref>) para a maioria das páginas Web geradas neste trabalho prático.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="arq-son-EVO.xml">Ficheiro XML correspondente à base de dados</deliverable>
+        <deliverable path="arq-son-EVO.json">Ficheiro JSON correspondente à base de dados</deliverable>
+        <deliverable path="app/">Pasta que contém todos os documentos relativos ao servidor</deliverable>
+        <deliverable path="PR.xml">Relatório do TP6 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP6 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP6 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP6 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>

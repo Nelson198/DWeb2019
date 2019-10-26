@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    h2(style="color: #27C21F") Adicionar registo
+    br
+    form(action="/" method="POST" style="margin-left: 100px; margin-right: 100px")
+        div(class="input-container")
+            i(class="fas fa-globe-europe fa-2x icon")
+            input(class="input-field" type="text" placeholder="Província" name="prov" required)
+
+        div(class="input-container")
+            i(class="fas fa-map-marker-alt fa-2x icon")
+            input(class="input-field" type="text" placeholder="Local" name="local" required)
+
+        div(class="input-container")
+            i(class="fas fa-music fa-2x icon")
+            input(class="input-field" type="text" placeholder="Título da música" name="tit" required)
+
+        div(class="input-container")
+            i(class="fas fa-drum fa-2x icon")
+            input(class="input-field" type="text" placeholder="Instrumento(s)" name="inst" required)
+
+        div(class="input-container")
+            i(class="fas fa-font fa-2x icon")
+            input(class="input-field" type="text" placeholder="Ficheiro da música : Formato" name="fileType" required)
+
+        div(class="input-container")
+            i(class="fas fa-file-audio fa-2x icon")
+            input(class="input-field" type="text" placeholder="Ficheiro da música : Nome" name="fileName" required)
+        
+        div(class="input-container")
+            i(class="fas fa-microphone fa-2x icon")
+            input(class="input-field" type="text" placeholder="Nome do músico" name="musico" required)
+
+        div(class="input-container")
+            i(class="fas fa-book fa-2x icon")
+            input(class="input-field" type="text" placeholder="Observações" name="obs" required)
+
+        div(class="input-container")
+            i(class="far fa-clock fa-2x icon")
+            input(class="input-field" type="text" placeholder="Duração da música" name="duracao" required)
+        br
+        input(type="submit" value="+" class="btn" style="background-color: #27C21F; color: #FFFFFF")
+    br
+    a(href="/" style="display: block; text-align: center") Voltar à página inicial
+    br

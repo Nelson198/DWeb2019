@@ -1,0 +1,96 @@
+extends layout
+
+block content
+    h2(style="color: #DEC92A") Editar registo
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        p
+            b Nº da música: 
+            = doc.id
+        p
+            b Província:
+            input(id="prov" class="input-field2" type="text" placeholder=doc.prov value=doc.prov)
+        if (doc.local)
+            p
+                b Local:
+                input(id="local" class="input-field2" type="text" placeholder=doc.local value=doc.local)
+        p
+            b Título da música:
+            input(id="tit" class="input-field2" type="text" placeholder=doc.tit value=doc.tit)
+        if (doc.inst)
+            p
+                b Intrumento(s):
+                input(id="inst" class="input-field2" type="text" placeholder=doc.inst  value=doc.inst)
+        p
+            b Ficheiro da música:
+            ul
+                li 
+                    u Formato:
+                    input(id="file-t" class="input-field2" type="text" placeholder=doc.file["-t"] value=doc.file["-t"])
+                li
+                    u Nome:
+                    input(id="file#text" class="input-field2" type="text" placeholder=doc.file["#text"] value=doc.file["#text"])
+        if (doc.musico)
+            p
+                b Músico:
+            if (doc.musico["#text"])
+                ul
+                    li
+                        u Nome(s):
+                        if (typeof doc.musico["#text"] === "string")
+                            input(id="musico#text" class="input-field2" type="text" placeholder=doc.musico["#text"] value=doc.musico["#text"])
+                            li
+                                u Localidade:
+                                input(id="musicofrom" class="input-field2" type="text" placeholder=doc.musico["from"] value=doc.musico["from"])
+                        else
+                            ol
+                                for t, i in doc.musico["#text"]
+                                    li
+                                        | 
+                                        input(id=`musico#text${i}` class="input-field2" type="text" placeholder=t value=t)
+                            li
+                                u Profissão:
+                                input(id="musicoprof" class="input-field2" type="text" placeholder=doc.musico["prof"] value=doc.musico["prof"])
+            else
+                ul
+                    li
+                        u Nome:
+                        input(id="musico" class="input-field2" type="text" placeholder=doc.musico value=doc.musico)
+        if (doc.obs)
+            p
+                b Observações: 
+                if (doc.obs["#text"])
+                    ul
+                        if (typeof doc.obs["#text"] === "string")
+                            li
+                                input(id="obs#text" class="input-field2" type="text" placeholder=doc.obs["#text"] value=doc.obs["#text"])
+                        else
+                            each t, i in doc.obs["#text"]
+                                li
+                                    input(id=`obs#text${i}` class="input-field2" type="text" placeholder=t value=t)
+                        br
+                        li
+                            u Outros ficheiros associados:
+                            ul
+                                each f, i in doc.obs["file"]
+                                    li
+                                        u Formato:
+                                        input(id=`obsfile-t${i}` class="input-field2" type="text" placeholder=f["-t"] value=f["-t"])
+                                        br
+                                        u Nome:
+                                        input(id=`obsfile#text${i}` class="input-field2" type="text" placeholder=f["#text"] value=f["#text"])
+                        br
+                        li
+                            u Instrumento(s) associado(s):
+                            input(id="obsintxt" class="input-field2" type="text" placeholder=doc.obs["intxt"] value=doc.obs["intxt"])
+                else
+                    input(id="obs" class="input-field2" type="text" placeholder=doc.obs value=doc.obs)
+        p
+            b Duração da música:
+            input(id="duracao" class="input-field2" type="text" placeholder=doc.duracao value=doc.duracao)
+        br
+        section
+            input(type="submit" value="Editar" class="btn" style="background-color: #DEC92A; color: #000000" onclick=`edit(${doc.id})`)
+    br
+    a(href=`/#${doc.id}` style="display: block; text-align: center") Voltar à página inicial
+    br
