@@ -26,12 +26,13 @@
             Uma vez que o era permitido, optei por fazer esta tarefa na seguinte <xref url="http://www.utilities-online.info/xmltojson/#.XbTICehKjDc">página Web</xref>.
         </p>
         <p>
-            O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa, isto é, o ficheiro <i>JSON</i> <i><xref url="arq-son-EVO.json">arq-son-EVO.json</xref></i>. 
-            Como tal, este gestor de tarefas é composto por <u>quatro funcionalidades</u>: adição, remoção, edição e consulta de registos.
+            O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa, isto é, o ficheiro <i>JSON</i> <i><xref url="arq-son-EVO.json">arq-son-EVO.json</xref></i> que contém arquivos musicais. 
+            Como tal, este gestor de arquivos musicais é composto por <u>quatro funcionalidades</u>: adição, remoção, edição e consulta de registos. Por forma a clarificar as propriedades que determinam univocamente cada registo, foi adicionado um identificador para cada um dos arquivos musicais. 
+            Esta última tarefa foi efetuada com a execução do ficheiro <i>JavaScript</i> <i><xref url="app/public/javascripts/handler_IDs.js">handler_IDs</xref></i> especificado na pasta da aplicação desenvolvida.
         </p>
         <p>
-            Tal como é indicado no título desta página, foi utilizada a <i>framework</i> <i>Express</i> para criação do servidor pretendido. 
-            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>Javascript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+            Tal como é indicado no título desta página, foi utilizada a <i>framework</i> <i>Express</i> para a criação do servidor pretendido. 
+            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>JavaScript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
         </p>
         <p>
             Por forma a agilizar o processo de codificação da maioria das páginas Web associadas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
@@ -39,7 +40,7 @@
             De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
         </p>
         <p>
-            <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <xref url="https://www.w3schools.com/">W3 Schools</xref> (            <xref url="https://www.w3schools.com/w3css/4/w3.css">w3.css</xref>) para a maioria das páginas Web geradas neste trabalho prático.
+            <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <xref url="https://www.w3schools.com/">W3 Schools</xref> (<xref url="https://www.w3schools.com/w3css/4/w3.css">w3.css</xref>) para a maioria das páginas Web geradas neste trabalho prático.
         </p>
     </abstract>
     <deliverables>

@@ -143,12 +143,12 @@ router.delete("/:id", (req, res, _next) => {
             if (index > -1) {
                 docs.splice(index, 1)
 
-                /* Generate new IDs */
-                i = 1
-                docs.forEach(doc => {
-                    doc["id"] = i
-                    i++
-                });
+                /* Generate new IDs (index --> docs.length) */
+                for (let i = index; i < docs.length; i++) {
+                    let doc = docs[i];
+                    doc["id"] -= 1
+                    docs[i] = doc
+                }
                 obj["arq"]["doc"] = docs
 
                 jsonfile.writeFile(myBD, obj, error => {
