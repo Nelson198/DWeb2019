@@ -1,0 +1,40 @@
+Exercício:
+
+1) Listar os géneros de filmes e indicar quantos há de cada um.
+R:
+    db.movies.aggregate([
+        { $unwind : "$genres" },
+        { $group : { 
+                _id : "$genres",
+                total : { $sum : 1 } 
+            } 
+        },
+        { $sort : { _id : 1 } }
+    ])
+
+2) Quais os títulos dos filmes do género "Drama" ?
+R:
+    db.movies.aggregate([
+        { $unwind : "$genres" },
+        { $match : { genres : "Drama" } },
+        { $group : {
+                _id : "$genres",
+                Drama_Movies : { $push : "$title" }
+            }
+        },
+        { $project : { _id : 0 }}
+    ])
+
+3) Que atores participaram em filmes do género "Comedy" ?
+R:
+    db.movies.aggregate([
+        { $unwind : "$genres" },
+        { $unwind : "$cast" },
+        { $match : { genres : "Comedy" } },
+        { $group : {
+                _id : "$genres",
+                Comedy_Movies_Actors : { $push : "$cast" }
+            }
+        },
+        { $project : { _id : 0 } }
+    ])

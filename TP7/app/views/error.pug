@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    if (error || message)
+        h1= message
+        h2= error.status
+        pre #{error.stack}
+    else
+        h1(style="text-align: center; font-size: 30pt; font-family: Montserrat, sans-serif; margin: auto; color: #ff0000") Erro
+        br
+        h2(style="text-align: center; font-family: Montserrat, sans-serif; margin: auto") &#128561; Infelizmente ocorreu um erro ... &#128561;
+        p(style="text-align: center; font-family: Montserrat, sans-serif; font-size: 15pt;")= erro
+        img(style="display: block; margin: 0 auto; margin-top: 2%; width: 40%; border-radius: 30px" src="https://media.giphy.com/media/TvLuZ00OIADoQ/giphy.gif", alt="")
+        br
+        br

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP7</keyname>
+        <title>Criação de um servidor em Node.js com uma base de dados em MongoDB </title>
+        <subtitle>Trabalho prático nº7 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>29/10/2019</bdate>
+        <edate>05/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>sétimo trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de dois exercícios que abordam o tema indicado acima.
+        </p>
+        <p>
+            No <u>primeiro exercício</u> era pedido a especificação de três <i>queries</i> em <i>MongoDB</i> sobre a base de dados presente neste projeto. Esta está associada a um arquivo de filmes americanos desde o ano de 1900 (disponível <xref url="movies.json">aqui</xref>).
+        </p>
+        <p>
+            O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa. Por forma a integrar a mesma na aplicação, esta base de dados foi importada previamente para o <i>MongoDB</i>. 
+            À semelhança do trabalho prático anterior, o servidor em causa suporta os seguintes <b>pedidos <i>HTTP</i></b>: <i>GET</i>, <i>POST</i>, <i>DELETE</i> e <i>PUT</i>.
+            Consequentemente, o servidor que integra esta aplicação disponibiliza <u>quatro funcionalidades</u>: adição, remoção, edição e consulta de registos (que neste caso correspondem a filmes).
+        </p>
+        <p>
+            De maneira a estabelecer a comunicação entre o servidor desenvolvido e o <i>MongoDB</i> foi utilizada a biblioteca <i>Mongoose</i>. 
+            Esta é uma biblioteca <i>ODM (Object Data Modeling)</i> para <i>MongoDB</i> e <i>Node.js</i> que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda, traduzir objetos em código e, posteriormente, a sua representação no <i>MongoDB</i>.
+        </p>
+        <p>
+            Tal como no trabalho prático anterior, foi utilizada a <i>framework</i> <i>Express</i> para a criação do servidor pretendido. 
+            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>JavaScript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+        </p>
+        <p>
+            Por forma a agilizar o processo de codificação da maioria das páginas Web associadas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+            Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+            De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+        </p>
+        <p>
+            <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <xref url="https://www.w3schools.com/">W3 Schools</xref> (<xref url="https://www.w3schools.com/w3css/4/w3.css">w3.css</xref>) para a maioria das páginas Web geradas neste trabalho prático.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="queries.txt">Ficheiro TXT com a especificação das três queries</deliverable>
+        <deliverable path="movies.json">Ficheiro JSON correspondente à base de dados mencionada acima</deliverable>
+        <deliverable path="app/">Pasta que contém todos os documentos relativos ao servidor</deliverable>
+        <deliverable path="PR.xml">Relatório do TP7 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP7 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP7 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP7 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>

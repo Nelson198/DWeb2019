@@ -1,0 +1,99 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Criação de um servidor em Node.js com uma base de dados em MongoDB </title>
+      <meta charset="UTF-8">
+   </head>
+   <body style="margin: 1%">
+      <h1 align="center">Criação de um servidor em Node.js com uma base de dados em MongoDB </h1>
+      <h2 align="center">Trabalho prático nº7 - Desenvolvimento de Aplicações Web</h2>
+      <hr>
+      <table align="center">
+         <tbody>
+            <tr>
+               <td width="50%" align="left"><b>KEY-NAME: </b>TP7
+               </td>
+               <td width="50%" align="right"><b>BEGIN DATE: </b>29/10/2019
+               </td>
+            </tr>
+            <tr>
+               <td width="50%" align="left"><b>TITLE: </b>Criação de um servidor em Node.js com uma base de dados em MongoDB 
+               </td>
+               <td width="50%" align="right"><b>END DATE: </b>05/11/2019
+               </td>
+            </tr>
+            <tr>
+               <td width="50%" align="left"><b>SUBTITLE: </b>Trabalho prático nº7 - Desenvolvimento de Aplicações Web
+               </td>
+               <td width="50%" align="right"><b>SUPERVISOR: </b><a href="http://www4.di.uminho.pt/~jcr/" target="_blank">José Carlos Ramalho</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <hr>
+      <h3>Workteam:</h3>
+      <ol>
+         <li>Nelson José Dias Teixeira</li>
+         <ul>
+            <li>PG41091</li>
+            <li><b>Email: </b>pg41091@alunos.uminho.pt
+            </li>
+            <li><b><i>Github: </i></b><a href="https://github.com/Nelson198" target="_blank">https://github.com/Nelson198</a></li>
+         </ul>
+      </ol>
+      <hr>
+      <hr>
+      <h3>Abstract:</h3>
+      <p style="text-align: justify">
+         No <b>sétimo trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de dois exercícios que abordam o tema indicado acima.
+         
+      </p>
+      <p style="text-align: justify">
+         No <u>primeiro exercício</u> era pedido a especificação de três <i>queries</i> em <i>MongoDB</i> sobre a base de dados presente neste projeto. Esta está associada a um arquivo de
+         filmes americanos desde o ano de 1900 (disponível <a href="movies.json" target="_blank">aqui</a>).
+         
+      </p>
+      <p style="text-align: justify">
+         O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa. Por forma a integrar a mesma na aplicação,
+         esta base de dados foi importada previamente para o <i>MongoDB</i>. 
+         À semelhança do trabalho prático anterior, o servidor em causa suporta os seguintes
+         <b>pedidos <i>HTTP</i></b>: <i>GET</i>, <i>POST</i>, <i>DELETE</i> e <i>PUT</i>.
+         Consequentemente, o servidor que integra esta aplicação disponibiliza <u>quatro funcionalidades</u>: adição, remoção, edição e consulta de registos (que neste caso correspondem a filmes).
+         
+      </p>
+      <p style="text-align: justify">
+         De maneira a estabelecer a comunicação entre o servidor desenvolvido e o <i>MongoDB</i> foi utilizada a biblioteca <i>Mongoose</i>. 
+         Esta é uma biblioteca <i>ODM (Object Data Modeling)</i> para <i>MongoDB</i> e <i>Node.js</i> que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda,
+         traduzir objetos em código e, posteriormente, a sua representação no <i>MongoDB</i>.
+         
+      </p>
+      <p style="text-align: justify">
+         Tal como no trabalho prático anterior, foi utilizada a <i>framework</i> <i>Express</i> para a criação do servidor pretendido. 
+         A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>JavaScript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+         
+      </p>
+      <p style="text-align: justify">
+         Por forma a agilizar o processo de codificação da maioria das páginas Web associadas
+         a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+         Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+         De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+         
+      </p>
+      <p style="text-align: justify">
+         <b>Nota:</b> foi utilizada a <i>stylesheet</i> disponibilizada pela página <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a> (<a href="https://www.w3schools.com/w3css/4/w3.css" target="_blank">w3.css</a>) para a maioria das páginas Web geradas neste trabalho prático.
+         
+      </p>
+      <hr>
+      <hr>
+      <h3>Deliverables:</h3>
+      <ul>
+         <li><a href="queries.txt">Ficheiro TXT com a especificação das três queries</a></li>
+         <li><a href="movies.json">Ficheiro JSON correspondente à base de dados mencionada acima</a></li>
+         <li><a href="app/">Pasta que contém todos os documentos relativos ao servidor</a></li>
+         <li><a href="PR.xml">Relatório do TP7 - XML</a></li>
+         <li><a href="PR.dtd">Relatório do TP7 - DTD</a></li>
+         <li><a href="PR.xsl">Relatório do TP7 - XSL</a></li>
+         <li><a href="PR.html">Relatório do TP7 - HTML (página Web)</a></li>
+      </ul>
+   </body>
+</html>
