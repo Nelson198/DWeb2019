@@ -1,3 +1,36 @@
 extends layout
 
 block content
+    h2(style="color: #27C21F") Adicionar registo de filme
+    br
+    form(action="/filmes" method="POST" style="margin-left: 100px; margin-right: 100px")
+        div(class="input-container")
+            i(class="fab fa-tumblr fa-2x icon")
+            input(class="input-field" type="text" placeholder="Título" name="title" required)
+
+        div(class="input-container")
+            i(class="far fa-calendar-alt fa-2x icon")
+            input(class="input-field" type="text" placeholder="Ano" name="year" required)
+
+        p
+            b Ator(es): 
+            input(id="actorInputNumber" type="number" value=0 min=0 max=10 style="margin-left: 13.2px" required)
+        div(class="actorsDiv")
+        //-
+            div(class="input-container")
+                i(class="fas fa-theater-masks fa-2x icon")
+                input(class="input-field" type="text" placeholder="Ator(es)" name="cast")
+
+        p
+            b Género(s): 
+            input(id="genreInputNumber" type="number" value=0 min=0 max=10 required)
+        div(class="genresDiv")
+        //-
+            div(class="input-container")
+                i(class="fas fa-bookmark fa-2x icon")
+                input(class="input-field" type="text" placeholder="Género(s)" name="genres")
+
+        input(type="submit" value="+" class="btn" style="background-color: #27C21F; color: #FFFFFF")
+    br
+    a(href="/filmes" style="display: block; text-align: center") Voltar à página inicial
+    br

@@ -2,51 +2,54 @@ var movie = require("../models/movie_model")
 
 const movies = module.exports
 
-movies.listar = () => {
+/* Exibem-se, aleatoriamente, 1000 dos 28795 documentos presentes na coleção da base de dados "movies" */
+movies.list = () => {
     return movie
-        .find()
+        .aggregate([
+            { $sample: { size: 1000 } }
+        ])
         .sort({ title: 1 })
         .exec()
 }
 
-movies.consultar = (fid) => {
+movies.consult = (id) => {
     return movie
-        .findOne({ _id: fid })
+        .findOne({ _id: id })
         .exec()
 }
 
-movies.contar = () => {
+movies.add = (doc) => {
+    return movie
+        .create(doc)
+        .exec()
+}
+
+movies.delete = (id) => {
+    return movie
+        .remove({ _id: id })
+        .exec()
+}
+
+movies.update = (id, updated) => {
+    return movie
+        .update({ _id: id }, updated)
+        .exec()
+}
+
+movies.count = () => {
     return movie
         .countDocuments()
         .exec()
 }
 
-movies.projetar = (campos) => {
+movies.projection = (campos) => {
     return movie
         .find({}, campos)
         .exec()
 }
 
-movies.agregar = (campo) => {
+movies.aggregate = (campo) => {
     return movie
         .aggregate([{ $group: { _id: "$" + campo, contador: { $sum: 1 } } }, { $sort: { contador: -1 } }])
-        .exec()
-}
-
-movies.apagar = (fid) => {
-    return movie
-        .remove({ _id: fid })
-        .exec()
-}
-
-movies.novo = (doc) => {
-    return movie
-        .insert(doc)
-        .exec()
-}
-
-movies.update = (fid, updated) => {
-    return movie
-        .update({ _id: fid }, updated)
         .exec()
 }

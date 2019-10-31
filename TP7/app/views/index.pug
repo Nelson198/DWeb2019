@@ -1,5 +1,35 @@
 extends layout
 
 block content
-  h1 Arquivo de filmes americanos
-  p Welcome to #{title}
+    h1 Arquivo de filmes americanos
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        table.w3-table-all.w3-hoverable.w3-border-orange.w3-centered
+            tr.w3-orange
+                th #
+                th Título do filme
+                th(width="13%") Ano do filme
+                th Operações
+            
+            tr.w3-border-orange
+                td ---
+                td ---
+                td ---
+                td
+                    a(href="/filmes/adicionar")
+                        img(src="/images/add.png" alt="")
+
+            each movie in movies
+                tr.w3-border-orange
+                    td(id=movie._id)= movie._id
+                    td= movie.title
+                    td= movie.year
+                    td(width="13%")
+                        a(href=`/filmes/${movie._id}`)
+                            img(src="/images/search.png" alt="")
+                        a(href=`/filmes/editar@${movie._id}`)
+                            img(src="/images/edit.png" alt="")
+                        img(src="/images/delete.png" alt="" onclick=`remove(${movie._id})`)
+    
+    a(href="#" style="display: block; text-align: center")
+        p(style="font-size: 25px") &#128285;

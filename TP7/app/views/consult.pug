@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h2(style="color: #70B7E5") Consulta de registo de um filme
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        p
+            b Identificador: 
+            = movie._id
+        p
+            b Título: 
+            = movie.title
+        p
+            b Ano: 
+            = movie.year
+        p
+            b Ator(es): 
+            if(movie.cast.length == 0)
+                | ---
+            else
+                ul
+                    each actor in movie.cast
+                        li= actor
+        p
+            b Género(s): 
+            if(movie.genres.length == 0)
+                | ---
+            else
+                ul
+                    each genre in movie.genres
+                        li= genre
+    br
+    a(href=`/filmes#${movie._id}` style="display: block; text-align: center") Voltar à página inicial
+    br

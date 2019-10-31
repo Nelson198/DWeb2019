@@ -1,9 +1,37 @@
 doctype html
 html
-  head
-    title Arquivo de filmes americanos
-    link(rel="shortcut icon" type="image/png" href="/images/video-camera.png")
-    //- W3 style
-    link(rel="stylesheet", href="/stylesheets/w3.css")
-  body
-    block content
+    head
+        title Arquivo de filmes americanos
+        link(rel="icon" type="image/x-icon" href="/images/favicon.ico")
+        //- W3 style
+        link(rel="stylesheet", href="/stylesheets/w3.css")
+        //- Personal style
+        link(rel="stylesheet", href="/stylesheets/style.css")
+        //- fontawesome
+        //- https://kit.fontawesome.com/a076d05399.js
+        script(src="/javascripts/fontawesome.js")
+        //- JQuery
+        //- https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        script(src="/javascripts/jquery.min.js")
+        script.
+            $(document).ready(() => {
+                $("#actorInputNumber").keypress((e) => {
+                    if(e.keyCode == 13) {
+                        $(".actorsDiv").empty()
+                        for(let i = 0; i < $("#actorInputNumber").val(); i++) {
+                            $(".actorsDiv").append(`<div class="input-container"><i class="fas fa-theater-masks fa-2x icon"></i><input class="input-field" type="text" placeholder="Ator nº${i+1}" name="cast" required></div>`)
+                        }
+                    }
+                })
+
+                $("#genreInputNumber").keypress((e) => {
+                    if(e.keyCode == 13) {
+                        $(".genresDiv").empty()
+                        for(let i = 0; i < $("#genreInputNumber").val(); i++) {
+                            $(".genresDiv").append(`<div class="input-container"><i class="fas fa-bookmark fa-2x icon"></i><input class="input-field" type="text" placeholder="Género nº${i+1}" name="genres" required></div>`)
+                        }
+                    }
+                })
+            });
+    body
+        block content
