@@ -1,11 +1,21 @@
-var mongoose = require("mongoose")
-var schema = mongoose.Schema
+const mongoose = require("mongoose")
 
-var movieSchema = new schema({
-    title: { type: String, required: true },
-    year: { type: Number, required: true },
-    cast: Array,
-    genres: Array
-})
+/* Data Structure for collection "movies" */
+const movieSchema = mongoose.Schema(
+    {
+        _id: mongoose.Schema.Types.ObjectId,
+        title: { type: String, required: true },
+        year: { type: Number, required: true },
+        cast: Array,
+        genres: Array
+    },
+    {
+        versionKey: false
+    }
+)
 
-module.exports = mongoose.model("movie", movieSchema)
+/* Mongoose model */
+const movieModel = mongoose.model("movie", movieSchema, "movies")
+
+/* Export model */
+module.exports = movieModel

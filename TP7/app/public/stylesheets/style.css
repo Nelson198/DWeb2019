@@ -44,10 +44,16 @@ li {
 }
 
 /* Style the input fields */
-.input-field, .input-field2  {
+.input-field, .input-field2 {
     width: 100%;
     padding: 10px;
-    outline: none;
+    outline: none
+}
+
+.input-field3 {
+    width: 88%;
+    padding: 10px;
+    outline: none
 }
 
 .input-field:focus {
@@ -56,6 +62,10 @@ li {
 
 .input-field2:focus {
     border: 2px solid #DEC92A;
+}
+
+.input-field3:focus {
+    border: 2px solid #FF9800;
 }
 
 /* Set a style for the submit button */

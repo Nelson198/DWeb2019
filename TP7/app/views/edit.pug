@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    - let date = new Date(); let year = date.getFullYear()
+
     h2(style="color: #DEC92A") Editar registo de um filme
     br
     div(style="margin-left: 100px; margin-right: 100px")
@@ -12,7 +14,7 @@ block content
             input(id="title" class="input-field2" type="text" placeholder=movie.title value=movie.title)
         p
             b Ano:
-            input(id="year" class="input-field2" type="text" placeholder=movie.year value=movie.year)
+            input(id="year" class="input-field2" type="number" min=1900 max=`${year}` placeholder=movie.year value=movie.year)
         p
             b Ator(es): 
             if(movie.cast.length == 0)
@@ -28,11 +30,11 @@ block content
                 | ---
             else
                 ul
-                    each genre in movie.genres
+                    each genre, i in movie.genres
                         li
                             input(id=`genre${i}` class="input-field2" type="text" placeholder=genre  value=genre)
         section
-            input(type="submit" value="Editar" class="btn" style="background-color: #DEC92A; color: #000000" onclick=`edit(${movie._id})`)
+            input(type="submit" value="Editar" class="btn" style="background-color: #DEC92A; color: #000000" onclick=`edit("${movie._id}", "${movie.cast}", "${movie.genres}")`)
     br
     a(href=`/filmes#${movie._id}` style="display: block; text-align: center") Voltar à página inicial
     br

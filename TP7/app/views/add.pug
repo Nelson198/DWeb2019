@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    - let date = new Date(); let year = date.getFullYear()
+
     h2(style="color: #27C21F") Adicionar registo de filme
     br
     form(action="/filmes" method="POST" style="margin-left: 100px; margin-right: 100px")
@@ -10,7 +12,7 @@ block content
 
         div(class="input-container")
             i(class="far fa-calendar-alt fa-2x icon")
-            input(class="input-field" type="text" placeholder="Ano" name="year" required)
+            input(class="input-field" type="number" min=1900 max=`${year}` placeholder="Ano" name="year" required)
 
         p
             b Ator(es): 
