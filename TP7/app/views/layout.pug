@@ -19,6 +19,18 @@ html
         script(src="/javascripts/jquery.min.js")
         script.
             $(document).ready(() => {
+                $("#idSearch").keypress((e) => {
+                    if(e.keyCode == 13) {
+                        if ($("#idSearch").val().length == 0) {
+                            $("#ops").empty()
+                        } else {
+                            let id = $("#idSearch").val()
+                            $("#ops").empty()
+                            $("#ops").append(`<a href="/filmes/${id}"><img src="/images/search.png" alt=""></a><a href="/filmes/editar/${id}"><img src="/images/edit.png" alt=""></a><img src="/images/delete.png" alt="" onclick=remove("${id}")>`)
+                        }
+                    }
+                })
+
                 $("#actorInputNumber").keypress((e) => {
                     if(e.keyCode == 13) {
                         $(".actorsDiv").empty()
@@ -36,6 +48,6 @@ html
                         }
                     }
                 })
-            });
+            })
     body
         block content

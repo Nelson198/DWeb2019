@@ -19,6 +19,19 @@ block content
                 td
                     a(href="/filmes/adicionar")
                         img(src="/images/add.png" alt="")
+            
+            tr.w3-border-orange
+                td(width="275px")
+                    input(id="idSearch" class="input-field3" type="text" placeholder="ID")
+                td ---
+                td ---
+                td(id="ops")
+                //-
+                    a(href=`/filmes/${id}`)
+                        img(src="/images/search.png" alt="")
+                    a(href=`/filmes/editar/${id}`)
+                        img(src="/images/edit.png" alt="")
+                    img(src="/images/delete.png" alt="" onclick=`remove("${id}")`)
 
             each movie in movies
                 tr.w3-border-orange

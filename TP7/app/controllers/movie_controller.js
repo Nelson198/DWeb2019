@@ -7,7 +7,7 @@ const movieModel = require("../models/movie_model")
 const movieController = module.exports
 
 /**
- * Exibem-se, aleatoriamente, 1000 dos 28795 documentos presentes na coleção da base de dados "movieController"
+ * Exibem-se, aleatoriamente, 1000 dos 28795 documentos presentes na coleção da base de dados "movies"
  * @param
  */
 movieController.list = () => {
