@@ -29,8 +29,8 @@ R:
 R:
     db.movies.aggregate([
         { $unwind : "$genres" },
-        { $unwind : "$cast" },
         { $match : { genres : "Comedy" } },
+        { $unwind : "$cast" },
         { $group : {
                 _id : "$genres",
                 Comedy_Movies_Actors : { $push : "$cast" }
