@@ -79,9 +79,9 @@ router.post("/", (req, res) => {
  */
 router.delete("/:idMovie", (req, res) => {
     movieController.delete(req.params.idMovie)
-        .then((data) => {
+        .then((_data) => {
             console.log(`Foi removido o registo do filme com _id: ${req.params.idMovie} na base de dados !`)
-            res.jsonp(data)
+            res.sendStatus(200)
         })
         .catch(error => {
             console.log(error)
@@ -95,9 +95,9 @@ router.delete("/:idMovie", (req, res) => {
  */
 router.put("/:idMovie", (req, res) => {
     movieController.update(req.params.idMovie, req.body)
-        .then(data => {
+        .then(_data => {
             console.log(`Foi atualizado o registo do filme com _id: ${req.params.idMovie} na base de dados !`)
-            res.jsonp(data)
+            res.sendStatus(200)
         })
         .catch(error => {
             console.log(error)
