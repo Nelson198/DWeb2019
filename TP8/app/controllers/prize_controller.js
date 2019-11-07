@@ -6,12 +6,13 @@ const prizeController = module.exports
 
 /**
  * Método para obter a listagem dos prémios Nobel.
- * Nota: Exibem-se apenas os campos "year" e "category", omitindo o campo "_id".
+ * Nota: Exibem-se apenas os campos "year" e "category".
+ *       O campo "_id" é também mostrado para facilitar a consulta de um registo de um prémio Nobel na interface da aplicação.
  * @param
  */
 prizeController.list = () => {
     return prizeModel
-        .find({}, { _id: 0, year: 1, category: 1 })
+        .find({}, { _id: 1, year: 1, category: 1 })
         .exec()
 }
 
@@ -52,7 +53,7 @@ prizeController.getPrizesByCategory = (category) => {
  */
 prizeController.getPrizesByCategoryAndYear = (category, year) => {
     return prizeModel
-        .find({ category: category, year: { $gt: year } })
+        .find({ category: category, year: { $gt: year } }, {})
         .exec()
 }
 

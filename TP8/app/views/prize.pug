@@ -1,0 +1,23 @@
+extends layout
+block content
+
+	h1(style="font-family: Montserrat, sans-serif; text-align: center; color: #E18720") Lista de prémios Nobel
+	br
+	div(style="margin-left: 15%; margin-right: 15%")
+		table.w3-table-all.w3-hoverable.w3-border-orange.w3-centered
+			tr.w3-orange
+				th Ano
+				th Categoria
+				th(width="34%") Operações
+			each prize in prizes
+				tr.w3-border-orange
+					td= prize.year
+					td= prize.category
+					td
+						a(href=`premios/${prize._id}`)
+							img(class="consult" src="/images/search.png" alt="")
+
+	a(href="#" style="display: block; text-align: center")
+		p(style="font-size: 25px") &#128285;
+	address(style="text-align: center; margin-top: 2%; margin-bottom: 2%")
+		a(href="/interface") Voltar

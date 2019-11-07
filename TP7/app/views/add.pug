@@ -1,8 +1,8 @@
 extends layout
-
 block content
-    - let date = new Date(); let year = date.getFullYear()
 
+    - let date = new Date(); let year = date.getFullYear()
+    
     h2(style="color: #27C21F") Adicionar registo de filme
     br
     form(action="/filmes" method="POST" style="margin-left: 100px; margin-right: 100px")

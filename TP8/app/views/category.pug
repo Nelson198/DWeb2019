@@ -1,0 +1,16 @@
+extends layout
+block content
+
+    - colors = ["w3-hover-aqua", "w3-hover-lime", "w3-hover-red", "w3-hover-amber", "w3-hover-brown", "w3-hover-orange"]
+
+    h1(style="font-family: Montserrat, sans-serif; text-align: center; color: #E18720") Categorias associadas aos prémios Nobel
+    br
+    div(style="margin-left: 20%; margin-right: 20%")
+        table.w3-table-all.w3-border-orange.w3-centered
+            tr.w3-orange
+                th Categorias
+            each category, i in categories
+                tr.w3-border-orange(class=`${colors[i]}`)
+                    td= category
+    address(style="text-align: center; margin-top: 5%")
+        a(href="/interface" style="text-align: center; margin-top: 5%") Voltar

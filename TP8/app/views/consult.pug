@@ -1,0 +1,41 @@
+extends layout
+block content
+
+    h1(style="font-family: Montserrat, sans-serif; text-align: center; color: #E18720") Consulta de registo de um prémio Nobel
+    br
+    div(style="margin-left: 5%; margin-right: 5%")
+        p
+            b Identificador: 
+            = prize._id
+        p
+            b Ano: 
+            = prize.year
+        p
+            b Categoria: 
+            = prize.category
+        if (prize.overallMotivation)
+            p
+                b Motivação geral: 
+                = prize.overallMotivation
+        p
+            b Laureado(s): 
+            each laureate in prize.laureates
+                ul
+                    li
+                        u Identificador:
+                        | 
+                        = laureate.id
+                    li
+                        u Nome:
+                        | 
+                        = laureate.firstname + " " + laureate.surname
+                    li
+                        u Motivação:
+                        | 
+                        = laureate.motivation
+                    li
+                        u Nº de laureados com que o prémio foi compartilhado:
+                        | 
+                        = laureate.share
+    address(style="text-align: center; margin-top: 2%; margin-bottom: 2%")
+        a(href="/interface/premios") Voltar

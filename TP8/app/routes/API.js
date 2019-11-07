@@ -35,7 +35,7 @@ router.get("/premios", (req, res, _next) => {
         }
     }
     else {
-        res.sendStatus(404)
+        res.status(500).render("error", { erro: "Os parâmetros introduzidos estão incorretos !" })
     }
 })
 
