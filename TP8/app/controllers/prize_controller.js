@@ -69,14 +69,16 @@ prizeController.getLaureates = () => {
         .group(
             {
                 _id: "$laureates.id",
-                year: { $push: "$year" },
-                category: { $push: "$category" },
-                name: { $push: { $concat: ["$laureates.firstname", " ", "$laureates.surname"] } }
+                firstname: { $first: "$laureates.firstname" },
+                surname: { $first: "$laureates.surname" },
+                prizes: {
+                    $push: {
+                        year: "$year",
+                        category: "$category"
+                    }
+                }
             }
         )
-        .unwind("$year")
-        .unwind("$category")
-        .unwind("$name")
         .project(
             {
                 _id: 0
@@ -84,7 +86,9 @@ prizeController.getLaureates = () => {
         )
         .sort(
             {
-                name: 1
+                firstname: true,
+                surname: true
             }
         )
+        .exec()
 }

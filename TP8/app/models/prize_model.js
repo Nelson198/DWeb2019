@@ -21,7 +21,7 @@ const prizeSchema = new mongoose.Schema(
         year: { type: String, required: true },
         category: { type: String, required: true },
         overallMotivation: String,
-        laureates: [laureateSchema]
+        laureates: { type: [laureateSchema], required: true }
     },
     {
         versionKey: false

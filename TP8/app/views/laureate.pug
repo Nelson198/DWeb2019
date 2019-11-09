@@ -10,10 +10,13 @@ block content
 				th Categoria
 				th Nome
 			each laureate in laureates
-				tr.w3-border-orange
-					td= laureate.year
-					td= laureate.category
-					td= laureate.name
+				- if (laureate.surname === "") { var name = laureate.firstname } else { var name = laureate.firstname + " " + laureate.surname }
+				each prize in laureate.prizes
+					tr.w3-border-orange
+						td= prize.year
+						td= prize.category
+						td= name
+					
 
 	a(href="#" style="display: block; text-align: center")
 		p(style="font-size: 25px") &#128285;

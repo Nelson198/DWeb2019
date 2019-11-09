@@ -18,21 +18,20 @@ router.get("/premios", (req, res, _next) => {
             .then(dados => res.jsonp(dados))
             .catch(erro => res.status(500).json(erro))
     }
-    else if (req.query.categoria !== undefined) {
+    /* (2) */
+    else if (req.query.categoria !== undefined && Object.keys(req.query).length === 1) {
         let category = req.query.categoria
-        /* (2) */
-        if (req.query.data === undefined) {
-            prizeController.getPrizesByCategory(category)
-                .then(dados => res.jsonp(dados))
-                .catch(erro => res.status(500).json(erro))
-        }
-        /* (3) */
-        else {
-            let data = req.query.data
-            prizeController.getPrizesByCategoryAndYear(category, data)
-                .then(dados => res.jsonp(dados))
-                .catch(erro => res.status(500).json(erro))
-        }
+        prizeController.getPrizesByCategory(category)
+            .then(dados => res.jsonp(dados))
+            .catch(erro => res.status(500).json(erro))
+    }
+    /* (3) */
+    else if (req.query.categoria !== undefined && req.query.data !== undefined && Object.keys(req.query).length === 2) {
+        let category = req.query.categoria
+        let data = req.query.data
+        prizeController.getPrizesByCategoryAndYear(category, data)
+            .then(dados => res.jsonp(dados))
+            .catch(erro => res.status(500).json(erro))
     }
     else {
         res.status(500).render("error", { erro: "Os parâmetros introduzidos estão incorretos !" })
