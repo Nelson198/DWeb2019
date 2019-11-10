@@ -9,4 +9,11 @@ router.get("/", (_req, res, _next) => {
     res.redirect("/interface")
 })
 
+/**
+ * Other HTTP request
+ */
+router.all("*", (_req, res, _next) => {
+    res.status(500).render("error", { erro: "Pedido HTTP não suportado !" })
+})
+
 module.exports = router
