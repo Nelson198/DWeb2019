@@ -1,0 +1,80 @@
+extends layout
+block content
+
+    h2(style="text-align: center; color: #70B7E5") Consulta de registo de uma entidade
+    br
+    div(style="margin-left: 100px; margin-right: 100px")
+        h3 Entidade:
+        div(style="margin-left: 150px; margin-right: 150px")
+            p
+                b Estado: 
+                = entidade.estado
+            p
+                b Sigla: 
+                = entidade.sigla
+            if(entidade.sioe)
+                p
+                    b Sioe: 
+                    = entidade.sioe
+            p
+                b Designação: 
+                = entidade.designacao
+            p
+                b Internacional: 
+                if (!entidade.internacional)
+                    | Não
+                else
+                    = entidade.internacional
+
+        if (tipologias.length != 0)
+            h3 Tipologia(s):
+            div(style="margin-left: 150px; margin-right: 150px")
+                each tipologia, i in tipologias
+                    div(style="margin-left: -50px; margin-right: -50px")
+                        p
+                            - let index = `(${i+1})`
+                            b= index
+                    p
+                        b Sigla: 
+                        = tipologia.sigla
+                    p
+                        b Designação: 
+                        = tipologia.designacao
+                    p
+                        b Identificador: 
+                        = tipologia.id
+        if (donos.length != 0)
+            h3 Dono(s):
+            div(style="margin-left: 150px; margin-right: 150px")
+                each dono, i in donos
+                    div(style="margin-left: -50px; margin-right: -50px")
+                        p
+                            - let index = `(${i+1})`
+                            b= index
+                    p
+                        b Código: 
+                        = dono.codigo
+                    p
+                        b Título: 
+                        = dono.titulo
+
+        if (participantes.length != 0)
+            h3 Participante(s):
+            div(style="margin-left: 150px; margin-right: 150px")
+                each participante, i in participantes
+                    div(style="margin-left: -50px; margin-right: -50px")
+                        p
+                            - let index = `(${i+1})`
+                            b= index
+                    p
+                        b Tipo: 
+                        = participante.tipoPar
+                    p
+                        b Código: 
+                        = participante.codigo
+                    p
+                        b Título: 
+                        = participante.titulo
+    br
+    a(href=`/#${id}` style="display: block; text-align: center") Voltar à página inicial
+    br

@@ -1,0 +1,28 @@
+extends layout
+block content
+
+    h1(style="font-family: Montserrat, sans-serif; text-align: center; color: #E18720") Lista de entidades
+    br
+    div(style="margin-left: 15%; margin-right: 15%")
+        table.w3-table-all.w3-hoverable.w3-border-orange.w3-centered
+            tr.w3-orange
+                th ID
+                th Sigla
+                th Designação
+                th Internacional
+                th Operação
+            each doc in db
+                tr.w3-border-orange
+                    td(id=doc.id)= doc.id
+                    td= doc.sigla
+                    td= doc.designacao
+                    if (!doc.internacional)
+                        td Não    
+                    else
+                        td= doc.internacional
+                    td
+                        a(href=`/${doc.id}`)
+                            img(src="/images/search.png" alt="")
+                    
+    a(href="#" style="display: block; text-align: center")
+        p(style="font-size: 25px") &#128285;
