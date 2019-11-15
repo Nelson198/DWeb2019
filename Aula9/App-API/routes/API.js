@@ -27,9 +27,9 @@ router.get("/periodos", (_req, res, _next) => {
  * OU
  * (2) Consultar toda a informação das obras cujos campos ano="ano"
  * OU
- * (3) Consultar toda a informação das obras cujos compositor="compositor" e duracao="duracao"
+ * (3) Consultar toda a informação das obras cujos campos periodo="periodo"
  * OU
- * (4) Consultar toda a informação das obras cujos campos periodo="periodo"
+ * (4) Consultar toda a informação das obras cujos compositor="compositor" e duracao="duracao"
  */
 router.get("/obras", (req, res, _next) => {
     /* (1) */
@@ -67,7 +67,7 @@ router.get("/obras", (req, res, _next) => {
 
 /**
  * GET
- * Consulta da informação total relativa a um prémio Nobel.
+ * Consulta da informação total relativa a uma obra.
  */
 router.get("/obras/:idObras", (req, res, _next) => {
     obras_Controller.consult(req.params.idObras)

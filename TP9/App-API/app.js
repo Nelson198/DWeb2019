@@ -1,25 +1,31 @@
-var createError = require("./node_modules/http-errors")
-var express = require("./node_modules/express")
-var path = require("path")
-var logger = require("./node_modules/morgan")
+const createError = require("http-errors")
+const express = require("express")
+const path = require("path")
+const logger = require("morgan")
+const mongoose = require("mongoose")
 
-var interface_Router = require("./routes/interface")
+/* Mongoose connection */
+mongoose.connect("mongodb://localhost:27017/compositores", { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("MongoDB ready: " + mongoose.connection.readyState))
+    .catch(() => console.log("Couldn't connect to MongoDB !"))
 
-var app = express()
+let API_Router = require("./routes/API")
+
+let app = express()
 
 /* View engine setup */
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "pug")
+
+/* Pretty JSON setup */
+app.set("json spaces", 4)
 
 app.use(logger("dev"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, "public")))
 
-/* Pretty JSON setup */
-app.set("json spaces", 4)
-
-app.use("/", interface_Router)
+app.use("/", API_Router)
 
 /* Catch 404 and forward to error handler */
 app.use((_req, _res, next) => {

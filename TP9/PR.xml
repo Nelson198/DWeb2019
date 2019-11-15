@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP9</keyname>
+        <title>Criação de um servidor em Node.js: API</title>
+        <subtitle>Trabalho prático nº9 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>12/11/2019</bdate>
+        <edate>19/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>nono trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de dois exercícios que abordam o tema indicado acima. 
+            De salientar que o principal objectivo associado a este projeto era consolidar os conhecimentos intrínsecos a uma implementação de uma <i>API</i>.
+        </p>
+        <p>
+            No <u>primeiro exercício</u> era necessário fazer a conversão do <i>dataset</i> disponibilizado na secção dos recursos desta <xref url="http://www4.di.uminho.pt/~jcr/Transfers/datasets/compositores.xml">página</xref> para um formato arbitrário. 
+            Tal como seria de esperar, foi utilizado o formato <i>JSON</i> para armazenar essa mesma informação. 
+            Este ficheiro foi posteriormente importado para o <i>MongoDB</i> (através do comando <i>mongoimport</i>), dando origem a um novo documento denominado por <i>compositores</i> (tal como o nome da base de dados).
+        </p>
+        <p>
+            O <u>segundo exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir a base de dados em causa e, ainda, suportar uma determinada <i>API</i> de dados. 
+            Nesta última contemplam-se vários pedidos <i>GET</i> sobre a informação presente na base de dados, nomeadamente a lista de todos os compositores ou ainda os dados relativos a um determinado compositor.
+        </p>
+        <p>
+            De maneira a estabelecer a comunicação entre o servidor desenvolvido e o <i>MongoDB</i> foi utilizada a biblioteca <i>Mongoose</i>. 
+            Esta é uma biblioteca <i>ODM (Object Data Modeling)</i> para <i>MongoDB</i> e <i>Node.js</i> que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda, traduzir objetos em código e, posteriormente, a sua representação no <i>MongoDB</i>.
+        </p>
+        <p>
+            Tal como no trabalho prático anterior, foi utilizada a <i>framework</i>
+            <i>Express</i> para a criação do servidor pretendido. 
+            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>JavaScript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+        </p>
+        <p>
+            Por forma a agilizar o processo de codificação da maioria das páginas Web associadas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+            Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+            De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+        </p>
+        <p>
+            No caso deste trabalho prático, como se tratava apenas de implementar uma <i>API</i> para suportar a base de dados em causa, foi apenas desenvolvido uma <i>view</i> caso haja algum erro na execução do mesmo.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="compositores.json">Ficheiro JSON correspondente à base de dados mencionada acima</deliverable>
+        <deliverable path="App-API/">Pasta que contém todos os documentos relativos ao servidor</deliverable>
+        <deliverable path="PR.xml">Relatório do TP9 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP9 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP9 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP9 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>
