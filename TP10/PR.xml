@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>TP10</keyname>
+        <title>Gestor de ficheiros - Servidor em Node.js</title>
+        <subtitle>Trabalho prático nº10 - Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>19/11/2019</bdate>
+        <edate>26/11/2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            No <b>décimo trabalho prático</b> da unidade curricular de <i>Desenvolvimento de Aplicações WEB</i> foi requirido a realização de um exercício que aborda o tema indicado acima.
+        </p>
+        <p>
+            Este <u>exercício</u> consistia na criação de um servidor, escrito em <i>JavaScript / Node.js</i>, que permitia gerir um conjunto arbitrário de ficheiros. 
+            Para tal, existem várias funcionalidades associadas a este servidor, como por exemplo a inserção, a eliminação e consulta de registos de ficheiros. Todos os ficheiros são, obviamente, armazenados localmente na pasta <xref url="fileManager/public/files/">files</xref> do servidor enquanto que os registos dos mesmos são guardados na base de dados da aplicação. 
+        </p>
+        <p>
+            Ao contrário do que foi utilizado até ao momento, foi usada a biblioteca <i>JQuery</i> para adicionar ou remover campos na interface do utilizador para a submissão de ficheiros e para possibilitar a consulta da informação de um determinado registo. 
+            Também foram implementados alguns métodos extra na <i>API</i> da aplicação para possibilitar a observação da informação presente na base de dados de forma mais conveniente.
+        </p>
+        <p>
+            De maneira a estabelecer a comunicação entre o servidor desenvolvido e o <i>MongoDB</i> foi utilizada a biblioteca <i>Mongoose</i>. 
+            Esta é uma biblioteca <i>ODM (Object Data Modeling)</i> para <i>MongoDB</i> e <i>Node.js</i> que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda, traduzir objetos em código e, posteriormente, a sua representação no <i>MongoDB</i>.
+        </p>
+        <p>
+            Tal como no trabalho prático anterior, foi utilizada a <i>framework</i>
+            <i>Express</i> para a criação do servidor pretendido. 
+            A partir desta foram criadas várias <i>views</i> (que permitem renderizar várias páginas <i>HTML</i>) e também alguns ficheiros <i>JavaScript</i> (que tratam de executar algumas ações intrínsecas ao funcionamento do servidor).
+        </p>
+        <p>
+            Por forma a agilizar o processo de codificação da maioria das páginas Web associadas a este projeto, foi utilizada uma biblioteca <i>JavaScript</i> denominada por <i>Pug.js</i>. 
+            Esta biblioteca possui recursos poderosos, como condições, ciclos, inclusões e <i>mixins</i>, com os quais podemos realizar, de forma simplificada, a renderização de código <i>HTML</i>. 
+            De salientar também que o <i>Pug</i> suporta nativamente <i>JavaScript</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="fileManager/">Pasta que contém todos os documentos relativos ao servidor</deliverable>
+        <deliverable path="PR.xml">Relatório do TP10 - XML</deliverable>
+        <deliverable path="PR.dtd">Relatório do TP10 - DTD</deliverable>
+        <deliverable path="PR.xsl">Relatório do TP10 - XSL</deliverable>
+        <deliverable path="PR.html">Relatório do TP10 - HTML (página Web)</deliverable>
+    </deliverables>
+</pr>

@@ -1,0 +1,62 @@
+extends layout
+ 
+block content
+    h1(style="text-align: center; color: #2196F3") Gestor de ficheiros
+    br
+    div(style="margin-left: 10%; margin-right: 10%")
+        .w3-container.w3-blue(class="container")
+            h3 Novo ficheiro
+    
+        form.w3-container(action="/api/files" method="post" enctype="multipart/form-data")
+            .w3-container(id="lista")
+                .w3-container(id="f1")
+                    br
+                    .w3-cell-row
+                        label.w3-cell Descrição:
+                        input.w3-input.w3-cell(type="text" name="desc" class="input" required)
+                    .w3-cell-row
+                        label.w3-cell Ficheiro:
+                        input.w3-input.w3-cell(type="file" name="file" class="input" id="inputFile" required)
+                    br
+            div(style="margin-left: 3%")                    
+                button(class="button" id="adicionar") +
+                button(class="button" id="remover" disabled) -
+            br
+            input.w3-input(type="submit" value="Submeter" id="submeter")
+            br
+    
+        .w3-card-4.modal(id="display")
+    
+        .w3-container.w3-blue(class="container")
+            h3 Lista de ficheiros guardados
+    
+        .w3-container
+            if (list.length > 0)
+                br
+                table.w3-table-all.w3-hoverable.w3-border-blue.w3-centered
+                    tr.w3-blue
+                        th Data
+                        th Descrição
+                        th Nome do ficheiro
+                        th Tipo
+                        th Tamanho
+                        th Operações
+                    each f in list
+                        tr(id=`f_${f._id}` class="ficheiro").w3-border-blue
+                            td= f.date
+                            td= f.desc
+                            td= f.name
+                            td= f.mimeType
+                            td
+                                = f.size
+                                |  bytes
+                            td
+                                img(class="ops" src="/images/info.png" alt="" onclick=`showFile(${JSON.stringify(f)})`)
+                                img(class="ops" src="/images/error.png" alt="" onclick=`remove("${f._id}")` style="margin-left: 10px")
+                br
+            else
+                p Não existe nenhum ficheiro armazenado na base de dados.
+    
+        footer.w3-container.w3-blue(class="container")
+            address Gestor de Ficheiros - Aula nº 10 - Desenvolvimento de Aplicações WEB
+        br

@@ -1,0 +1,109 @@
+.ops {
+    cursor: pointer
+}
+
+.ops:hover {
+    transition-duration: 0.4s;
+    opacity: 0.7
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+
+.button {
+    margin-right: 1%;
+    border-radius: 30%;
+    border: none;
+    width: 45px;
+    max-width: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition-duration: 0.5s;
+    font-size: 14pt;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle
+}
+
+#adicionar {
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50
+}
+
+#adicionar:hover {
+    cursor: pointer;
+    background-color: #c7c7c7;
+    color: #4CAF50;
+    border: 2px solid #4CAF50
+}
+
+#adicionar:focus {
+    outline: 0
+}
+
+#remover {
+    border: 2px solid #FF0000;
+    background-color: #FF0000
+}
+
+#remover:hover {
+    cursor: pointer;
+    background-color: #c7c7c7;
+    color: #FF0000;
+    border: 2px solid #FF0000
+}
+
+#remover:focus {
+    outline: 0
+}
+
+#remover:disabled {
+    cursor: no-drop
+}
+
+#submeter {
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    background-color: #2196F3;
+    color: #FFFFFF;
+    width: 50%;
+    max-width: 50%;
+    font-weight: bold;
+    display: block;
+    margin: auto
+}
+
+#submeter:hover {
+    cursor: pointer;
+    border: 2px solid #2196F3;
+    color: #2196F3;
+    background-color: #c7c7c7
+}
+
+.container {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4)
+}
+
+.input {
+    border: 2px solid #c7c7c7;
+    border-radius: 10px;
+    transition-duration: 0.5s
+}
+
+.input:focus {
+    border: 2px solid #2196F3;
+    outline: 0
+}
+
+#inputFile {
+    width: 86.4%;
+    margin-left: 13.7%;
+    margin-top: 1%;
+    cursor: pointer
+}
