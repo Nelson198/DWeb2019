@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1(style="font-family: Montserrat, sans-serif; text-align: center; color: #E18720") CLAV: Classificação e Avaliação da Informação Pública
+    h2(style="font-family: Montserrat, sans-serif; text-align: center") Lista das entidades
+    br
+    br
+    div(style="margin-left: 15%; margin-right: 15%")
+        table.w3-table-all.w3-hoverable.w3-border-orange.w3-centered
+            tr.w3-orange
+                th ID
+                th Sigla
+                th Designação
+                th Operação
+            each entidade in entidades
+                tr.w3-border-orange
+                    td(id=entidade.id)= entidade.id
+                    td= entidade.sigla
+                    td= entidade.designacao
+                    td
+                        a(href=`/interface/${entidade.id}`)
+                            img(src="/images/search.png" alt="")
+                    
+    a(href="#" style="display: block; text-align: center")
+        p(style="font-size: 25px") &#128285;

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <metadata>
+        <keyname>teste</keyname>
+        <title>Teste de Avaliação</title>
+        <subtitle>Desenvolvimento de Aplicações Web</subtitle>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>16/01/2020</bdate>
+        <edate>16/01/2020</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG41091</identifier>
+            <name>Nelson José Dias Teixeira</name>
+            <email>pg41091@alunos.uminho.pt</email>
+            <git>https://github.com/Nelson198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Relativamente ao 1º exercício do teste é pedido a construção de uma API de dados. Por forma a fazer a persistência da base de dados, foi convertido o ficheiro XML para o formato JSON 
+            através deste
+            <xref url="http://www.utilities-online.info/xmltojson/#.XiBMSFP7S_c">website</xref>
+            . Consequentemente, esta base de dados com o nome
+            <i>obras</i>
+            foi importada para o
+            <i>MongoDB</i>
+            através do comando
+            <i>mongoimport</i>
+            com a opção
+            <i>--jsonArray</i>
+            . A porta do servidor relativa à API é a porta com nº 1000.
+        </p>
+        <p>
+            Relativamente ao 2º exercício do teste é pedido a obtenção de alguns resultados acerca da API de dados da plataforma
+            <i>CLAV</i>
+            . As respostas a estas perguntas encontram-se disponíveis no ficheiro
+            <i>queries.txt</i>
+            .
+            Quanto à implementação da interface pedida foram criadas 2 páginas
+            <i>Web</i>
+            , uma relativa à listagem das entidades e outra relativa à informação associada à mesma. Por forma a aceder a esta última informação é necessário clicar no ícone da lupa presente da página da listagem das entidades.
+            Por forma a aceder à API de dados da plataforma CLAV foi utilizado a biblioteca
+            <i>axios</i>
+            .
+            A porta do servidor relativa à interface é a porta com nº 2000.
+        </p>
+        <p>
+            De maneira a estabelecer a comunicação entre o servidor desenvolvido e o
+            <i>MongoDB</i>
+            foi utilizada a biblioteca
+            <i>Mongoose</i>
+            . 
+            Esta é uma biblioteca
+            <i>ODM (Object Data Modeling)</i>
+            para
+            <i>MongoDB</i>
+            e
+            <i>Node.js</i>
+            que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda, traduzir objetos em código e, posteriormente, a sua representação no
+            <i>MongoDB</i>
+            .
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="obras/">Pasta que contém todos os documentos relativos à API</deliverable>
+        <deliverable path="interface/queries.txt">Ficheiro TXT que contém as respostas às perguntas relativas à API de dados da plataforma CLAV</deliverable>
+        <deliverable path="interface/">Pasta que contém todos os documentos relativos à API</deliverable>
+        <deliverable path="PR.xml">Documento XML</deliverable>
+        <deliverable path="PR.dtd">Documento DTD</deliverable>
+        <deliverable path="PR.xsl">Documento XSL</deliverable>
+    </deliverables>
+</pr>
