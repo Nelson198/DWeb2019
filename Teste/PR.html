@@ -1,0 +1,113 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Teste de Avaliação</title>
+      <meta charset="UTF-8">
+   </head>
+   <body style="margin: 1%">
+      <h1 align="center">Teste de Avaliação</h1>
+      <h2 align="center">Desenvolvimento de Aplicações Web</h2>
+      <hr>
+      <table align="center">
+         <tbody>
+            <tr>
+               <td width="50%" align="left"><b>KEY-NAME: </b>teste
+               </td>
+               <td width="50%" align="right"><b>BEGIN DATE: </b>16/01/2020
+               </td>
+            </tr>
+            <tr>
+               <td width="50%" align="left"><b>TITLE: </b>Teste de Avaliação
+               </td>
+               <td width="50%" align="right"><b>END DATE: </b>16/01/2020
+               </td>
+            </tr>
+            <tr>
+               <td width="50%" align="left"><b>SUBTITLE: </b>Desenvolvimento de Aplicações Web
+               </td>
+               <td width="50%" align="right"><b>SUPERVISOR: </b><a href="http://www4.di.uminho.pt/~jcr/" target="_blank">José Carlos Ramalho</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <hr>
+      <h3>Workteam:</h3>
+      <ol>
+         <li>Nelson José Dias Teixeira</li>
+         <ul>
+            <li>PG41091</li>
+            <li><b>Email: </b>pg41091@alunos.uminho.pt
+            </li>
+            <li><b><i>Github: </i></b><a href="https://github.com/Nelson198" target="_blank">https://github.com/Nelson198</a></li>
+         </ul>
+      </ol>
+      <hr>
+      <hr>
+      <h3>Abstract:</h3>
+      <p style="text-align: justify">
+         Relativamente ao 1º exercício do teste é pedido a construção de uma API de dados.
+         Por forma a fazer a persistência da base de dados, foi convertido o ficheiro XML para
+         o formato JSON 
+         através deste
+         <a href="http://www.utilities-online.info/xmltojson/#.XiBMSFP7S_c" target="_blank">website</a>
+         . Consequentemente, esta base de dados com o nome
+         <i>obras</i>
+         foi importada para o
+         <i>MongoDB</i>
+         através do comando
+         <i>mongoimport</i>
+         com a opção
+         <i>--jsonArray</i>
+         . A porta do servidor relativa à API é a porta com nº 1000.
+         
+      </p>
+      <p style="text-align: justify">
+         Relativamente ao 2º exercício do teste é pedido a obtenção de alguns resultados acerca
+         da API de dados da plataforma
+         <i>CLAV</i>
+         . As respostas a estas perguntas encontram-se disponíveis no ficheiro
+         <i>queries.txt</i>
+         .
+         Quanto à implementação da interface pedida foram criadas 2 páginas
+         <i>Web</i>
+         , uma relativa à listagem das entidades e outra relativa à informação associada à
+         mesma. Por forma a aceder a esta última informação é necessário clicar no ícone da
+         lupa presente da página da listagem das entidades.
+         Por forma a aceder à API de dados da plataforma CLAV foi utilizado a biblioteca
+         <i>axios</i>
+         .
+         A porta do servidor relativa à interface é a porta com nº 2000.
+         
+      </p>
+      <p style="text-align: justify">
+         De maneira a estabelecer a comunicação entre o servidor desenvolvido e o
+         <i>MongoDB</i>
+         foi utilizada a biblioteca
+         <i>Mongoose</i>
+         . 
+         Esta é uma biblioteca
+         <i>ODM (Object Data Modeling)</i>
+         para
+         <i>MongoDB</i>
+         e
+         <i>Node.js</i>
+         que permite gerir relacionamentos entre dados, fornecer validação de esquema e, ainda,
+         traduzir objetos em código e, posteriormente, a sua representação no
+         <i>MongoDB</i>
+         .
+         
+      </p>
+      <hr>
+      <hr>
+      <h3>Deliverables:</h3>
+      <ul>
+         <li><a href="obras/">Pasta que contém todos os documentos relativos à API</a></li>
+         <li><a href="interface/queries.txt">Ficheiro TXT que contém as respostas às perguntas relativas à API de dados da plataforma
+               CLAV</a></li>
+         <li><a href="interface/">Pasta que contém todos os documentos relativos à API</a></li>
+         <li><a href="PR.xml">Documento XML</a></li>
+         <li><a href="PR.dtd">Documento DTD</a></li>
+         <li><a href="PR.xsl">Documento XSL</a></li>
+      </ul>
+   </body>
+</html>

@@ -20,5 +20,5 @@ npm start
 
 ### Importação da base de dados
 ```
-mongoimport --db prize --collection prize --type json --file prize.json --jsonArray
+mongoimport --db prize --collection prize --type json --file=prize.json --jsonArray
 ```
